@@ -27,3 +27,10 @@ sudo a2enmod cache cache_disk proxy proxy_http headers ssl
         ProxyPass /fw/matter http://my.matterport.com/show/?m=nYQRg189YPh
         ProxyPassReverse /fw/matter http://my.matterport.com/show/?m=nYQRg189YPh
 </VirtualHost>
+
+<Directory /home/iot/>
+        Options Indexes FollowSymLinks
+        AllowOverride None
+        Require all granted
+</Directory>
+
