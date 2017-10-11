@@ -1,0 +1,50 @@
+body {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+}
+
+canvas {
+    display: block;
+}
+
+.nav-link {
+    height: 80px;
+    padding: 0 30px;
+    line-height: 80px;
+    font-size: 1.5em;
+}
+
+.nav { background-color: #333 !important; }
+
+.nav-tabs { border: 1px solid #333; }
+
+.nav>li>a { background-color: #333 !important; color: #fff; }
+
+.nav-link.active {
+    background-color: #fff !important;
+    color: #000 !important;
+    border: none;
+}
+
+.floating-button {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-color: #333;
+    position: fixed;
+}
+
+.floating-left {
+    left: 20px;
+    bottom: 20px;
+}
+
+.floating-right {
+    right: 20px;
+    bottom: 20px;
+}

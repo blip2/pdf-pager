@@ -1,0 +1,58 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/pdf.min.js"></script>
+<script src="js/kiosk-pdf.js"></script>
+</head>
+<body>
+
+<div class="header">
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#parametrics" role="tab">Parametrics Projects</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#yearbook" role="tab">Arup Yearbook</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
+  </li>
+</ul>
+</div>
+
+<div class="tab-content">
+  <div class="tab-pane active" id="parametrics" role="tabpanel">
+    <div class="wrapper">
+        <canvas id="parametrics-canvas" height="1000" width="1920"></canvas>
+        <div class="floating-button floating-left prev">Prev</div>
+        <div class="floating-button floating-right next">Next</div>
+        <script type="text/javascript">
+            var parametrics = jQuery.extend({}, pdfHandler)
+            parametrics.init($('#parametrics-canvas'), 'content/parametrics.pdf')
+        </script>
+    </div>
+  </div>
+  <div class="tab-pane active" id="yearbook" role="tabpanel">
+    <div class="wrapper">
+        <canvas id="yearbook-canvas" height="1000" width="1920"></canvas>
+        <div class="floating-button floating-left prev">Prev</div>
+        <div class="floating-button floating-right next">Next</div>
+        <script type="text/javascript">
+            var yearbook = jQuery.extend({}, pdfHandler)
+            yearbook.init($('#yearbook-canvas'), 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf')
+        </script>
+    </div>
+  </div>
+  <div class="tab-pane" id="messages" role="tabpanel">...</div>
+  <div class="tab-pane" id="settings" role="tabpanel">...</div>
+
+</div>
+</body>
+</html>
