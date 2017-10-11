@@ -1,7 +1,7 @@
 // The workerSrc property shall be specified.
 PDFJS.workerSrc = 'js/pdf.worker.min.js';
 
-var pdfHandler = {
+var pagedpdfHandler = {
   pdfDoc: null,
   pageNum: 1,
   pageRendering: false,

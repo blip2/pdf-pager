@@ -6,7 +6,9 @@
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/pdf.min.js"></script>
-<script src="js/kiosk-pdf.js"></script>
+<script src="js/pdf_viewer.js"></script>
+<script src="js/paged-pdf.js"></script>
+<script src="js/single-pdf.js"></script>
 </head>
 <body>
 
@@ -24,22 +26,27 @@
 <div class="tab-content">
   <div class="tab-pane active" id="parametrics" role="tabpanel">
     <div class="wrapper">
-        <canvas id="parametrics-canvas" height="1000" width="1920"></canvas>
-        <div class="floating-button floating-left prev">Prev</div>
-        <div class="floating-button floating-right next">Next</div>
+          <canvas id="parametrics-canvas" height="1000" width="1920"></canvas>
+        <div class="floating-button floating-left prev"><span class="chevron left"></span></div>
+        <div class="floating-button floating-right next"><span class="chevron right"></span></div>
         <script type="text/javascript">
-            var parametrics = jQuery.extend({}, pdfHandler)
+            var parametrics = jQuery.extend({}, pagedpdfHandler)
             parametrics.init($('#parametrics-canvas'), 'content/parametrics.pdf')
         </script>
     </div>
   </div>
   <div class="tab-pane" id="yearbook" role="tabpanel">
     <div class="wrapper">
-        <canvas id="yearbook-canvas" height="1000" width="1920"></canvas>
+        <object type="application/pdf" data="content/yearbook.pdf#toolbar=0&navpanes=0&scrollbar=0&messages=0&statusbar=0&view=FitH" width="1920" height="1000">
+        <parm name="view" value="FitH"/></object>
+        <!--<canvas id="yearbook-canvas" height="1000" width="1920"></canvas>-->
+        <!--  <div id="yearbook-canvas" style="position: relative;overflow: scroll;">
+            <div id="viewer" class="pdfViewer"></div>
+          </div>
         <script type="text/javascript">
-            var yearbook = jQuery.extend({}, pdfHandler)
+            var yearbook = jQuery.extend({}, singlepdfHandler)
             yearbook.init($('#yearbook-canvas'), 'content/yearbook.pdf')
-        </script>
+        </script>-->
     </div>
   </div>
 
