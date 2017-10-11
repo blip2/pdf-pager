@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: #000;
     overflow: hidden;
 }
 
@@ -9,21 +9,31 @@ body {
 }
 
 canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
 }
 
 .nav-link {
-    height: 80px;
+    height: 74px;
     padding: 0 30px;
-    line-height: 80px;
+    line-height: 74px;
     font-size: 1.5em;
 }
 
 .nav { background-color: #333 !important; }
 
-.nav-tabs { border: 1px solid #333; }
+.nav-tabs {
+    border-bottom: 5px solid #fecb17;
+    height: 79px;
+}
 
-.nav>li>a { background-color: #333 !important; color: #fff; }
+.nav>li>a {
+    background-color: #333 !important;
+    color: #fff;
+}
 
 .nav-link.active {
     background-color: #fff !important;
@@ -33,18 +43,17 @@ canvas {
 
 .floating-button {
     border-radius: 50%;
-    width: 70px;
-    height: 70px;
+    width: 120px;
+    height: 120px;
     background-color: #333;
     position: fixed;
+    top: 560px;
 }
 
 .floating-left {
     left: 20px;
-    bottom: 20px;
 }
 
 .floating-right {
     right: 20px;
-    bottom: 20px;
 }

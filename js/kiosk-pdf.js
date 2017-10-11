@@ -66,7 +66,6 @@ var pdfHandler = {
       this.canvas = canvas[0];
       this.ctx = this.canvas.getContext('2d');
       var handler = this;
-      console.log(canvas.siblings().filter('.next'))
       canvas.siblings().filter('.prev').click(function() { handler.onPrevPage(); });
       canvas.siblings().filter('.next').click(function() { handler.onNextPage(); });
       PDFJS.getDocument(url).then(function(pdfDoc_) {

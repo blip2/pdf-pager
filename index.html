@@ -18,12 +18,6 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#yearbook" role="tab">Arup Yearbook</a>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#messages" role="tab">Messages</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Settings</a>
-  </li>
 </ul>
 </div>
 
@@ -39,19 +33,15 @@
         </script>
     </div>
   </div>
-  <div class="tab-pane active" id="yearbook" role="tabpanel">
+  <div class="tab-pane" id="yearbook" role="tabpanel">
     <div class="wrapper">
         <canvas id="yearbook-canvas" height="1000" width="1920"></canvas>
-        <div class="floating-button floating-left prev">Prev</div>
-        <div class="floating-button floating-right next">Next</div>
         <script type="text/javascript">
             var yearbook = jQuery.extend({}, pdfHandler)
-            yearbook.init($('#yearbook-canvas'), 'http://cdn.mozilla.net/pdfjs/tracemonkey.pdf')
+            yearbook.init($('#yearbook-canvas'), 'content/yearbook.pdf')
         </script>
     </div>
   </div>
-  <div class="tab-pane" id="messages" role="tabpanel">...</div>
-  <div class="tab-pane" id="settings" role="tabpanel">...</div>
 
 </div>
 </body>
