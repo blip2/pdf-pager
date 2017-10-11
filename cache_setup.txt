@@ -1,0 +1,29 @@
+sudo a2enmod cache cache_disk proxy proxy_http headers ssl
+
+<VirtualHost *:80>
+        ServerAdmin ben.hussey@arup.com
+        DocumentRoot /home/ben/scratch/code/pdf-pager
+
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined
+
+        CacheEnable disk /fw
+        CacheRoot /var/www/cache/
+        CacheIgnoreNoLastMod On
+        CacheDefaultExpire 86400
+
+        Header unset Expires
+        Header unset Cache-Control
+        Header unset Pragma
+        Header unset X-Frame-Options
+
+        ProxyRequests On
+        SSLProxyEngine On
+        SSLProxyCheckPeerCN on
+        SSLProxyCheckPeerExpire on
+
+        ProxyPass /fw/events http://www.arup.com/news-and-events/events/no-8-arup
+        ProxyPassReverse /fw/events http://www.arup.com/news-and-events/events/no-8-arup
+        ProxyPass /fw/matter http://my.matterport.com/show/?m=nYQRg189YPh
+        ProxyPassReverse /fw/matter http://my.matterport.com/show/?m=nYQRg189YPh
+</VirtualHost>

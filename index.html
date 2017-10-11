@@ -6,9 +6,7 @@
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/pdf.min.js"></script>
-<script src="js/pdf_viewer.js"></script>
 <script src="js/paged-pdf.js"></script>
-<script src="js/single-pdf.js"></script>
 </head>
 <body>
 
@@ -19,6 +17,15 @@
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#yearbook" role="tab">Arup Yearbook</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#aiml" role="tab">AI @ Arup</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#events" role="tab">Events at Arup</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#circularbuilding" role="tab">Circular Building</a>
   </li>
 </ul>
 </div>
@@ -48,6 +55,15 @@
             yearbook.init($('#yearbook-canvas'), 'content/yearbook.pdf')
         </script>-->
     </div>
+  </div>
+  <div class="tab-pane" id="aiml" role="tabpanel">
+    <iframe src="/fw/matter" sandbox height="1000" width="1920"></iframe>
+  </div>
+  <div class="tab-pane" id="events" role="tabpanel">
+    <iframe src="/fw/events" sandbox height="1000" width="1920"></iframe>
+  </div>
+  <div class="tab-pane" id="circularbuilding" role="tabpanel">
+    <iframe src="https://www.youtube.com/embed/s03dNDg_hWQ?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
   </div>
 
 </div>
