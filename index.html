@@ -2,6 +2,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -28,17 +29,22 @@
     <a class="nav-link" data-toggle="tab" href="#events" role="tab">Events</a>
   </li>-->
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#iotdesk" role="tab">All About The Desk</a>
+    <a class="nav-link" data-toggle="tab" href="#iotdesk" role="tab">All About The Desk <i class="fa fa-headphones" aria-hidden="true"></i></a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#circularbuilding" role="tab">Circular Building</a>
+    <a class="nav-link" data-toggle="tab" href="#circularbuilding" role="tab">Circular Building <i class="fa fa-headphones" aria-hidden="true"></i></a>
   </li>
 </ul>
 </div>
 
-<div class="tab-content">
+<div class="tab-content arup">
   <div class="tab-pane active" id="home" role="tabpanel">
-
+  <h2 style="color: white; margin-left: 300px; margin-top: 30px;">
+  <div class="arrow">
+    <div class="circle"></div>
+    <div class="triangle"></div>
+  </div>
+  Click on the tabs above to explore our work!</h2>
   </div>
   <div class="tab-pane" id="parametrics" role="tabpanel">
     <div class="wrapper">
@@ -52,7 +58,7 @@
     </div>
   </div>
   <div class="tab-pane" id="aiml" role="tabpanel">
-    <iframe height="1000" width="1920" src="http://my.matterport.com/show/?m=nYQRg189YPh&help=2&play=1"></iframe>
+    <iframe height="1000" width="1920" src="http://my.matterport.com/show/?m=nYQRg189YPh&help=2&play=1&mls=1&title=2"></iframe>
     <script type="text/javascript">
       $('a[href="#aiml"]').on('hidden.bs.tab', function (e) {
         $('#aiml').children(":first").attr("src",$('#aiml').children(":first").attr("src"));
@@ -69,20 +75,43 @@
 
   </div>
   <div class="tab-pane" id="iotdesk" role="tabpanel">
-    <iframe src="https://www.youtube.com/embed/s5v0oxR077w?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
+    <video height="1000" width="1920" controls><source src="content/Its All About The Desk.mp4" type="video/mp4"></video>
+    <script type="text/javascript">
+      $('#iotdesk').children(":first")[0].currentTime = 1;
+      $('a[href="#iotdesk"]').on('shown.bs.tab', function (e) {
+        $('#iotdesk').children(":first")[0].play();
+      })
+      $('a[href="#iotdesk"]').on('hidden.bs.tab', function (e) {
+        $('#iotdesk').children(":first")[0].pause();
+        $('#iotdesk').children(":first")[0].currentTime = 1;
+      })
+    </script>
+    <!--<iframe src="https://www.youtube.com/embed/s5v0oxR077w?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
     <script type="text/javascript">
       $('a[href="#iotdesk"]').on('hidden.bs.tab', function (e) {
         $('#iotdesk').children(":first").attr("src",$('#iotdesk').children(":first").attr("src"));
       })
-    </script>
+    </script>-->
   </div>
   <div class="tab-pane" id="circularbuilding" role="tabpanel">
-    <iframe src="https://www.youtube.com/embed/s03dNDg_hWQ?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
+    <video height="1000" width="1920" controls><source src="content/CircularBuilding_ALearningJourney.mp4" type="video/mp4"></video>
+    <script type="text/javascript">
+      $('#circularbuilding').children(":first")[0].currentTime = 1;
+      $('a[href="#circularbuilding"]').on('shown.bs.tab', function (e) {
+        $('#circularbuilding').children(":first")[0].play();
+      })
+      $('a[href="#circularbuilding"]').on('hidden.bs.tab', function (e) {
+        console.log($('#circularbuilding').children(":first"))
+        $('#circularbuilding').children(":first")[0].pause();
+        $('#circularbuilding').children(":first")[0].currentTime = 1;
+      })
+    </script>
+    <!--<iframe src="https://www.youtube.com/embed/s03dNDg_hWQ?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
     <script type="text/javascript">
       $('a[href="#circularbuilding"]').on('hidden.bs.tab', function (e) {
         $('#circularbuilding').children(":first").attr("src",$('#circularbuilding').children(":first").attr("src"));
       })
-    </script>
+    </script>-->
   </div>
 
 </div>
