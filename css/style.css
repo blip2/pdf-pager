@@ -1,6 +1,10 @@
 body {
     background-color: #000;
     overflow: hidden;
+    background-image: url('../arup.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .wrapper {
@@ -93,4 +97,53 @@ canvas {
 .chevron.left:before {
     left: 0.32em;
     transform: rotate(-135deg);
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display:none;
+}
+
+video::-internal-media-controls-download-button {
+    display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+    overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+    width: calc(100% + 30px); /* Adjust as needed */
+}
+
+.arrow {
+  position: relative;
+  padding: 0px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.circle {
+  position: absolute;
+  box-sizing: border-box;
+  height: 40px;
+  width: 40px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  -webkit-clip-path: inset(0 50% 0 0);
+  clip-path: inset(0 50% 0 0);
+}
+.triangle {
+  position: absolute;
+  width: 35px;
+  height: 30px;
+  background: #fff;
+  margin-top: -15px;
+  margin-left: 10px;
+  -webkit-clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0, 0% 100%, 100% 100%);
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  transform: rotate(60deg);
 }
