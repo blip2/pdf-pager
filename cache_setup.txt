@@ -2,7 +2,7 @@ sudo a2enmod cache cache_disk proxy proxy_http headers ssl
 
 <VirtualHost *:80>
         ServerAdmin ben.hussey@arup.com
-        DocumentRoot /home/ben/scratch/code/pdf-pager
+        DocumentRoot /home/iot/pdf-pager
 
         ErrorLog ${APACHE_LOG_DIR}/error.log
         CustomLog ${APACHE_LOG_DIR}/access.log combined
