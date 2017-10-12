@@ -11,18 +11,24 @@
 <body>
 
 <div class="header">
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs nav-pills nav-fill" role="tablist">
   <li class="nav-item">
-    <a class="nav-link active" data-toggle="tab" href="#parametrics" role="tab">Parametrics Projects</a>
+    <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Arup</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#yearbook" role="tab">Arup Yearbook</a>
+    <a class="nav-link" data-toggle="tab" href="#parametrics" role="tab">Parametric Design</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#aiml" role="tab">AI @ Arup</a>
+    <a class="nav-link" data-toggle="tab" href="#aiml" role="tab">AI Exhibition</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" data-toggle="tab" href="#events" role="tab">Events at Arup</a>
+    <a class="nav-link" data-toggle="tab" href="#yearbook" role="tab">Yearbook</a>
+  </li>
+  <!--<li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#events" role="tab">Events</a>
+  </li>-->
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#iotdesk" role="tab">All About The Desk</a>
   </li>
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#circularbuilding" role="tab">Circular Building</a>
@@ -31,7 +37,10 @@
 </div>
 
 <div class="tab-content">
-  <div class="tab-pane active" id="parametrics" role="tabpanel">
+  <div class="tab-pane active" id="home" role="tabpanel">
+
+  </div>
+  <div class="tab-pane" id="parametrics" role="tabpanel">
     <div class="wrapper">
           <canvas id="parametrics-canvas" height="1000" width="1920"></canvas>
         <div class="floating-button floating-left prev"><span class="chevron left"></span></div>
@@ -42,28 +51,38 @@
         </script>
     </div>
   </div>
+  <div class="tab-pane" id="aiml" role="tabpanel">
+    <iframe height="1000" width="1920" src="http://my.matterport.com/show/?m=nYQRg189YPh&help=2&play=1"></iframe>
+    <script type="text/javascript">
+      $('a[href="#aiml"]').on('hidden.bs.tab', function (e) {
+        $('#aiml').children(":first").attr("src",$('#aiml').children(":first").attr("src"));
+      })
+    </script>
+  </div>
   <div class="tab-pane" id="yearbook" role="tabpanel">
     <div class="wrapper">
         <object type="application/pdf" data="content/yearbook.pdf#toolbar=0&navpanes=0&scrollbar=0&messages=0&statusbar=0&view=FitH" width="1920" height="1000">
         <parm name="view" value="FitH"/></object>
-        <!--<canvas id="yearbook-canvas" height="1000" width="1920"></canvas>-->
-        <!--  <div id="yearbook-canvas" style="position: relative;overflow: scroll;">
-            <div id="viewer" class="pdfViewer"></div>
-          </div>
-        <script type="text/javascript">
-            var yearbook = jQuery.extend({}, singlepdfHandler)
-            yearbook.init($('#yearbook-canvas'), 'content/yearbook.pdf')
-        </script>-->
     </div>
   </div>
-  <div class="tab-pane" id="aiml" role="tabpanel">
-    <iframe src="/fw/matter" sandbox height="1000" width="1920"></iframe>
-  </div>
   <div class="tab-pane" id="events" role="tabpanel">
-    <iframe src="/fw/events" sandbox height="1000" width="1920"></iframe>
+
+  </div>
+  <div class="tab-pane" id="iotdesk" role="tabpanel">
+    <iframe src="https://www.youtube.com/embed/s5v0oxR077w?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
+    <script type="text/javascript">
+      $('a[href="#iotdesk"]').on('hidden.bs.tab', function (e) {
+        $('#iotdesk').children(":first").attr("src",$('#iotdesk').children(":first").attr("src"));
+      })
+    </script>
   </div>
   <div class="tab-pane" id="circularbuilding" role="tabpanel">
     <iframe src="https://www.youtube.com/embed/s03dNDg_hWQ?rel=0&amp;showinfo=0" frameborder="0" height="1000" width="1920"></iframe>
+    <script type="text/javascript">
+      $('a[href="#circularbuilding"]').on('hidden.bs.tab', function (e) {
+        $('#circularbuilding').children(":first").attr("src",$('#circularbuilding').children(":first").attr("src"));
+      })
+    </script>
   </div>
 
 </div>

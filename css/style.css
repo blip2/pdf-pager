@@ -30,15 +30,21 @@ canvas {
     height: 79px;
 }
 
-.nav>li>a {
+.nav-tabs .nav-link {
     background-color: #333 !important;
     color: #fff;
+    border-right: 1px solid #000;
+    border-top-right-radius: none;
+    border-top-left-radius: none;
 }
 
 .nav-link.active {
     background-color: #fff !important;
     color: #000 !important;
     border: none;
+    border-right: 1px solid #000;
+    border-top-right-radius: none;
+    border-top-left-radius: none;
 }
 
 .floating-button {
