@@ -13,6 +13,8 @@ $('#submit-form').click( function(e) {
                 $(this).val('')
             })
             $('a[href="#home"]').click();
+            $('.current-field').removeClass('current-field')
+            $('input[name="name"]').addClass('current-field')
         },
     });
 });
@@ -64,7 +66,7 @@ $(function(){
         }
 
         // Special characters
-        if ($this.hasClass('symbol')) character = $('span:visible', $this).val();
+        if ($this.hasClass('symbol')) character = $('span:visible', $this).html().replace('&amp;','&');
         if ($this.hasClass('space')) character = ' ';
         if ($this.hasClass('tab')) return;
         if ($this.hasClass('return')) character = "\n";
@@ -82,7 +84,6 @@ $(function(){
 
         // Add the character
 
-        console.log($('.current-field'))
         $('.current-field').val($('.current-field').val() + character);
     });
 
