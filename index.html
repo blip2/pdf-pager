@@ -34,19 +34,23 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#circularbuilding" role="tab">Circular Building <i class="fa fa-headphones" aria-hidden="true"></i></a>
   </li>
+  <li class="nav-item" style="display: none">
+    <a class="nav-link" data-toggle="tab" href="#contact" role="tab">Contact</a>
+  </li>
 </ul>
 </div>
 
 <div class="tab-content arup">
   <div class="tab-pane active" id="home" role="tabpanel">
-  <h2 style="color: white; margin-left: 300px; margin-top: 30px;">
-    <div class="arrow">
-      <div class="circle"></div>
-      <div class="triangle"></div>
-    </div>
-    Click on the tabs above to explore our work!
-  </h2>
-  <div style="position: fixed; bottom: 200px; left: 50%; margin-left: -298px;"><img src="dcw.png" class="center" /></div>
+    <h2 style="color: white; margin-left: 300px; margin-top: 30px;">
+      <div class="arrow">
+        <div class="circle"></div>
+        <div class="triangle"></div>
+      </div>
+      Click on the tabs above to explore our work!
+    </h2>
+    <div style="position: fixed; bottom: 200px; left: 50%; margin-left: -298px;"><img src="dcw.png" class="center" /></div>
+    <div id="hidden-contact" style="display: block; width: 100px; height: 100px; position: fixed; bottom: 0; right: 0;"></div>
   </div>
   <div class="tab-pane" id="parametrics" role="tabpanel">
     <div style="position: fixed; bottom: 200px; width: 100%; text-align: center; color: white;"><h2>Loading - Please wait...</h2></div>
@@ -121,6 +125,88 @@
         $('#circularbuilding').children(":first").attr("src",$('#circularbuilding').children(":first").attr("src"));
       })
     </script>-->
+  </div>
+
+  <div class="tab-pane" id="contact" role="tabpanel">
+    <div style="position: fixed; top: 150px; left: 50%; margin-left: -522px; width: 1045px;">
+    <form id="contact-form" autocomplete="off">
+      <div class="form-group">
+        <input type="text" class="form-control" name="name" placeholder="Name">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="company" placeholder="Company">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Email Address">
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" name="interest" placeholder="What do you want to hear more about?">
+      </div>
+      <small id="privacy" class="form-text text-muted">We'll only use your details to get in touch after this event and will never share them outside of Arup.</small>
+      <button id="submit-form" class="btn btn-secondary pull-right">Submit</button>
+    </form>
+    </div>
+
+
+    <div style="position: fixed; bottom: 50px; left: 50%; margin-left: -522px;">
+    <ul id="keyboard">
+        <li class="symbol"><span class="off">`</span><span class="on">~</span></li>
+        <li class="symbol"><span class="off">1</span><span class="on">!</span></li>
+        <li class="symbol"><span class="off">2</span><span class="on">&quot;</span></li>
+        <li class="symbol"><span class="off">3</span><span class="on">&pound;</span></li>
+        <li class="symbol"><span class="off">4</span><span class="on">$</span></li>
+        <li class="symbol"><span class="off">5</span><span class="on">%</span></li>
+        <li class="symbol"><span class="off">6</span><span class="on">^</span></li>
+        <li class="symbol"><span class="off">7</span><span class="on">&amp;</span></li>
+        <li class="symbol"><span class="off">8</span><span class="on">*</span></li>
+        <li class="symbol"><span class="off">9</span><span class="on">(</span></li>
+        <li class="symbol"><span class="off">0</span><span class="on">)</span></li>
+        <li class="symbol"><span class="off">-</span><span class="on">=</span></li>
+        <li class="symbol"><span class="off">_</span><span class="on">+</span></li>
+        <li class="delete lastitem">delete</li>
+        <li class="tab">tab</li>
+        <li class="letter">q</li>
+        <li class="letter">w</li>
+        <li class="letter">e</li>
+        <li class="letter">r</li>
+        <li class="letter">t</li>
+        <li class="letter">y</li>
+        <li class="letter">u</li>
+        <li class="letter">i</li>
+        <li class="letter">o</li>
+        <li class="letter">p</li>
+        <li class="symbol"><span class="off">[</span><span class="on">{</span></li>
+        <li class="symbol"><span class="off">]</span><span class="on">}</span></li>
+        <li class="symbol lastitem"><span class="off">#</span><span class="on">\</span></li>
+        <li class="capslock">caps</li>
+        <li class="letter">a</li>
+        <li class="letter">s</li>
+        <li class="letter">d</li>
+        <li class="letter">f</li>
+        <li class="letter">g</li>
+        <li class="letter">h</li>
+        <li class="letter">j</li>
+        <li class="letter">k</li>
+        <li class="letter">l</li>
+        <li class="symbol"><span class="off">;</span><span class="on">:</span></li>
+        <li class="symbol"><span class="off">@</span><span class="on">'</span></li>
+        <li class="return lastitem">enter</li>
+        <li class="left-shift">shift</li>
+        <li class="letter">z</li>
+        <li class="letter">x</li>
+        <li class="letter">c</li>
+        <li class="letter">v</li>
+        <li class="letter">b</li>
+        <li class="letter">n</li>
+        <li class="letter">m</li>
+        <li class="symbol"><span class="off">,</span><span class="on">&lt;</span></li>
+        <li class="symbol"><span class="off">.</span><span class="on">&gt;</span></li>
+        <li class="symbol"><span class="off">/</span><span class="on">?</span></li>
+        <li class="right-shift lastitem">shift</li>
+        <li class="space lastitem">&nbsp;</li>
+    </ul>
+    </div>
+    <script src="js/form.js"></script>
   </div>
 
 </div>
