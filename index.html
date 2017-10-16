@@ -17,6 +17,9 @@
     <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Arup</a>
   </li>
   <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#digital" role="tab">Digital Leadership</a>
+  </li>
+  <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#parametrics" role="tab">Parametric Design</a>
   </li>
   <li class="nav-item">
@@ -52,8 +55,16 @@
     <div style="position: fixed; bottom: 200px; left: 50%; margin-left: -298px;"><img src="dcw.png" class="center" /></div>
     <div id="hidden-contact" style="display: block; width: 100px; height: 100px; position: fixed; bottom: 0; right: 0;"></div>
   </div>
-  <div class="tab-pane" id="parametrics" role="tabpanel">
+  <div class="tab-pane" id="digital" role="tabpanel">
     <div style="position: fixed; bottom: 200px; width: 100%; text-align: center; color: white;"><h2>Loading - Please wait...</h2></div>
+    <div class="wrapper">
+        <object type="application/pdf" data="content/leadership.pdf#toolbar=0&navpanes=0&scrollbar=0&messages=0&statusbar=0&zoom=125" width="1920" height="1000">
+        <param name="view" value="fitV" /></object>
+    </div>
+  </div>
+  <div class="tab-pane" id="parametrics" role="tabpanel">
+      <div style="position: fixed; bottom: 0px; width: 1920px; height: 1000px; background: white;"></div>
+    <div style="position: fixed; bottom: 200px; width: 100%; text-align: center; color: black;"><h2>Loading - Please wait...</h2></div>
     <div class="wrapper">
           <canvas id="parametrics-canvas" height="1000" width="1920"></canvas>
         <div class="floating-button floating-left prev"><span class="chevron left"></span></div>
@@ -114,7 +125,6 @@
         $('#circularbuilding').children(":first")[0].play();
       })
       $('a[href="#circularbuilding"]').on('hidden.bs.tab', function (e) {
-        console.log($('#circularbuilding').children(":first"))
         $('#circularbuilding').children(":first")[0].pause();
         $('#circularbuilding').children(":first")[0].currentTime = 1;
       })
@@ -144,7 +154,11 @@
       </div>
       <small id="privacy" class="form-text text-muted">We'll only use your details to get in touch after this event and will never share them outside of Arup.</small>
       <button id="submit-form" class="btn btn-secondary pull-right">Submit</button>
+      <button id="clear-form" class="btn btn-secondary pull-right" style="margin-right: 10px;">Clear</button>
     </form>
+    <script type="text/javascript">
+      $('a[href="#contact"]').on('hidden.bs.tab', function (e) { clearContactForm(); })
+    </script>
     </div>
 
 

@@ -2,6 +2,12 @@ $('#hidden-contact').click(function () {
     $('a[href="#contact"]').click();
 });
 
+function clearContactForm() {
+    $('#contact-form input').each(function() {
+        $(this).val('')
+    })
+}
+
 $('#submit-form').click( function(e) {
     e.preventDefault();
     $.ajax({
@@ -9,14 +15,17 @@ $('#submit-form').click( function(e) {
         type: 'post',
         data: $('#contact-form').serialize(),
         success: function(data) {
-            $('#contact-form input').each(function() {
-                $(this).val('')
-            })
+            clearContactForm();
             $('a[href="#home"]').click();
             $('.current-field').removeClass('current-field')
             $('input[name="name"]').addClass('current-field')
         },
     });
+});
+
+$('#clear-form').click( function(e) {
+    e.preventDefault();
+    clearContactForm();
 });
 
 $('input[name="name"]').addClass('current-field')
